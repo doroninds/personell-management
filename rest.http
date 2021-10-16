@@ -1,0 +1,42 @@
+### Entry point
+GET http://127.0.0.1:3000/
+
+### Health check
+GET http://127.0.0.1:3000/.health-check
+
+### Staff list
+GET http://127.0.0.1:3000/staff
+
+### Staff list with search
+GET http://127.0.0.1:3000/staff?search=dima
+
+### Get staff by id
+GET http://127.0.0.1:3000/staff/1
+
+
+### Create staff
+POST http://127.0.0.1:3000/staff
+content-type: application/json
+
+{
+    "firstName": "Dima",
+    "lastName": "Doronin",
+    "email": "staff1@app.com",
+    "phone": "+44-1103",
+    "address": "Earth",
+    "data": { "documentSerial": "60 12", "documentNumber": "123456" }
+}
+
+### Update staff
+PATCH http://127.0.0.1:3000/staff/1
+content-type: application/json
+
+{
+    "middleName": "Ivanovich"
+}
+
+### Delete staff
+DELETE http://127.0.0.1:3000/staff/1
+
+
+
