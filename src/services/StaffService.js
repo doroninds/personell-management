@@ -32,9 +32,7 @@ export default class StaffService {
 
   async get(id) {
     const staff = await this.model.findByPk(id)
-    console.log('staff', staff)
     if (!staff) {
-      console.log('here')
       throw new StaffNotFoundError()
     }
     return staff
